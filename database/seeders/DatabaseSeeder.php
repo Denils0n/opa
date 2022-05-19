@@ -21,5 +21,11 @@ class DatabaseSeeder extends Seeder
         //$this -> call([
          //   TutorSeeder::class
        // ]);
+       
+       $this->call([
+   
+           AnimalSeeder::class
+   
+       ]);
     }
 }

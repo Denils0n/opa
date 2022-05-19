@@ -22,4 +22,11 @@ class Tutor extends Model
         'complemento',
         
     ];
+
+    public function animal(){
+
+        return $this->hasMany(Animal::class, 'tutor_id');
+
+    }
+
 }
