@@ -27,5 +27,9 @@ class DatabaseSeeder extends Seeder
            AnimalSeeder::class
    
        ]);
+       $this->call([
+        PrestadorSeeder::class
+
+        ]);
     }
 }
