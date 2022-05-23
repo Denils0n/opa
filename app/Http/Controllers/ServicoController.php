@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Servicos;
+use App\Models\Servico;
 use Illuminate\Http\Request;
 
-class ServicosController extends Controller
+class ServicoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class ServicosController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\servicos  $servicos
+     * @param  \App\Models\Servico  $servico
      * @return \Illuminate\Http\Response
      */
-    public function show(servicos $servicos)
+    public function show(Servico $servico)
     {
         //
     }
@@ -52,10 +52,10 @@ class ServicosController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\servicos  $servicos
+     * @param  \App\Models\Servico  $servico
      * @return \Illuminate\Http\Response
      */
-    public function edit(servicos $servicos)
+    public function edit(Servico $servico)
     {
         //
     }
@@ -64,10 +64,10 @@ class ServicosController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\servicos  $servicos
+     * @param  \App\Models\Servico  $servico
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, servicos $servicos)
+    public function update(Request $request, Servico $servico)
     {
         //
     }
@@ -75,10 +75,10 @@ class ServicosController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\servicos  $servicos
+     * @param  \App\Models\Servico  $servico
      * @return \Illuminate\Http\Response
      */
-    public function destroy(servicos $servicos)
+    public function destroy(Servico $servico)
     {
         //
     }

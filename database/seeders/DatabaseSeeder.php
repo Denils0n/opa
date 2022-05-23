@@ -18,11 +18,11 @@ class DatabaseSeeder extends Seeder
     {
         
         User::factory(10)->create();
-        Tutor::factory(10)->create();
+        //Tutor::factory(10)->create();
       
-        //$this -> call([
-         //   TutorSeeder::class
-       // ]);
+        $this->call([
+            TutorSeeder::class
+        ]);
        
        $this->call([
    
@@ -30,7 +30,14 @@ class DatabaseSeeder extends Seeder
    
        ]);
        $this->call([
-        PrestadorSeeder::class
+        
+            PrestadorSeeder::class
+
+        ]);
+        $this->call([
+
+            ServicoSeeder::class
+
 
         ]);
 

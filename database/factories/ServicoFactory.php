@@ -14,8 +14,8 @@ class ServicoFactory extends Factory
     public function definition()
     {
         return [
-            'hora' => $this ->faker->time(),
-            'preco' => $this ->faker->string(),
+            'hora' => $this ->faker->randomNumber(1,true),
+            'preco' => $this ->faker->randomFloat(1,20,30),
             'descricao' => $this ->faker->text(),
         ];
     }

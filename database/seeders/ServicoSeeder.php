@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use App\Models\Servico;
 use Illuminate\Database\Seeder;
 
-class ServicosSeeder extends Seeder
+class ServicoSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,7 +14,6 @@ class ServicosSeeder extends Seeder
      */
     public function run()
     {
-        //
         for ($i = 0; $i< 10; $i++){
             Servico::factory()->create();
         }
