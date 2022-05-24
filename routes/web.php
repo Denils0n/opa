@@ -23,5 +23,6 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 Route::post('/add-animal', [AnimalController::class, 'store']);
+Route::delete('/apagar-animal/{id}', [AnimalController::class, 'destroy']);
 
 require __DIR__.'/auth.php';

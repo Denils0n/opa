@@ -28,6 +28,13 @@
                                 <td>{{$animal->AN_TIPO}}</td>
                                 <td>{{$animal->AN_RACA}}</td>
                                 <td>{{$animal->AN_COMPRAVACINA}}</td>
+                                <td>
+                                <form action="/apagar-animal/{{$animal->id}}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" name="Apagar"> APAGAR</button>
+                                </form>
+                                </td>
                             </tr>
                         @endforeach
                     </table>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Animal;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use lluminate\Database\Eloquent\Collection;
 
 class AnimalController extends Controller
 {
@@ -89,8 +90,11 @@ class AnimalController extends Controller
      * @param  \App\Models\Animal  $animal
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Animal $animal)
+    public function destroy($animal)
     {
-        //
+        Animal::findOrFail($animal)->delete();
+        //Animal::find($animal)->delete();
+        return redirect('/dashboard');
+        //echo $animal;
     }
 }
