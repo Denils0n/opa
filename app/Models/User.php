@@ -21,6 +21,14 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'cpf',
+        'telefone',
+        'estado',
+        'cidade',
+        'bairro',
+        'rua',
+        'numero',
+        'complemento',
     ];
 
     /**
@@ -41,4 +49,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function animal(){
+
+        return $this->hasMany(Animal::class, 'user_id');
+
+    }
 }

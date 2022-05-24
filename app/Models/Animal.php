@@ -15,11 +15,11 @@ class Animal extends Model
         'AN_TIPO',
         'AN_RACA',
         'AN_COMPRAVACINA',
-        'tutor_id',
+        'user_id',
     ];
     public function donoAnimal (){
 
-        return $this->belongsTo(Tutor::class, 'tutor_id');
+        return $this->belongsTo(User::class, 'user_id');
 
     }
 

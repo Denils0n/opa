@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Models\Tutor;
+
 use App\Models\User;
-use App\Models\Servico;
+//use App\Models\Servico;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -20,9 +20,7 @@ class DatabaseSeeder extends Seeder
         User::factory(10)->create();
         //Tutor::factory(10)->create();
       
-        $this->call([
-            TutorSeeder::class
-        ]);
+        
        
        $this->call([
    

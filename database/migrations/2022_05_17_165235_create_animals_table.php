@@ -22,7 +22,7 @@ class CreateAnimalsTable extends Migration
             $table->string('AN_TIPO');
             $table->string('AN_RACA');
             $table->string('AN_COMPRAVACINA');
-            $table->foreignId('tutor_id');
+            $table->foreignId('user_id');
         });
     }
 
