@@ -37,6 +37,12 @@ class RegisteredUserController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'cpf' => ['required', 'string', 'size:11', 'unique:users'],
             'telefone' => ['required', 'string', 'size:8'],
+            'estado' => ['required', 'string', 'max:255'],
+            'cidade' => ['required', 'string', 'max:255'],
+            'bairro' => ['required', 'string', 'max:255'],
+            'rua' => ['required', 'string', 'max:255'],
+            'numero' => ['required', 'string', 'max:5'],
+            'complemento' =>['required', 'string'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
@@ -46,6 +52,12 @@ class RegisteredUserController extends Controller
             'email' => $request->email,
             'telefone' => $request->telefone,
             'cpf' => $request->cpf,
+            'estado' => $request->estado,
+            'cidade' => $request->cidade,
+            'bairro' => $request->bairro,
+            'rua' => $request->rua,
+            'numero' => $request->numero,
+            'complemento' => $request->complemento,
             'password' => Hash::make($request->password),
         ]);
 

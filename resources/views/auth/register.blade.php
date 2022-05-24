@@ -33,6 +33,48 @@
                 <x-input id="telefone" class="block mt-1 w-full" type="number" name="telefone" :value="old('telefone')" required  />
             </div>
 
+            <!-- estado  -->
+            <div class="mt-4">
+                <x-label for="estado" :value="__('estado')" />
+
+                <x-input id="estado" class="block mt-1 w-full" type="string" name="estado" :value="old('estado')" required  />
+            </div>
+
+            <!-- cidade  -->
+            <div class="mt-4">
+                <x-label for="cidade" :value="__('cidade')" />
+
+                <x-input id="cidade" class="block mt-1 w-full" type="string" name="cidade" :value="old('cidade')" required  />
+            </div>
+
+            <!-- bairro  -->
+            <div class="mt-4">
+                <x-label for="bairro" :value="__('bairro')" />
+
+                <x-input id="bairro" class="block mt-1 w-full" type="string" name="bairro" :value="old('bairro')" required  />
+            </div>
+
+            <!-- rua  -->
+            <div class="mt-4">
+                <x-label for="rua" :value="__('rua')" />
+
+                <x-input id="rua" class="block mt-1 w-full" type="string" name="rua" :value="old('rua')" required  />
+            </div>
+
+            <!-- numero  -->
+            <div class="mt-4">
+                <x-label for="numero" :value="__('numero')" />
+
+                <x-input id="numero" class="block mt-1 w-full" type="string" name="numero" :value="old('numero')" required  />
+            </div>
+
+            <!-- complemento  -->
+            <div class="mt-4">
+                <x-label for="complemento" :value="__('complemento')" />
+
+                <x-input id="complemento" class="block mt-1 w-full" type="string " name="complemento" :value="old('complemento')" required  />
+            </div>
+
             <!-- Email Address -->
             <div class="mt-4">
                 <x-label for="email" :value="__('Email')" />
