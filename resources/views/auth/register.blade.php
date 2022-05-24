@@ -26,6 +26,13 @@
                 <x-input id="cpf" class="block mt-1 w-full" type="number" name="cpf" :value="old('cpf')" required  />
             </div>
 
+            <!-- telefone  -->
+            <div class="mt-4">
+                <x-label for="telefone" :value="__('telefone')" />
+
+                <x-input id="telefone" class="block mt-1 w-full" type="number" name="telefone" :value="old('telefone')" required  />
+            </div>
+
             <!-- Email Address -->
             <div class="mt-4">
                 <x-label for="email" :value="__('Email')" />
