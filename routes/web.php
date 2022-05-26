@@ -24,5 +24,6 @@ Route::get('/dashboard', function () {
 
 Route::post('/add-animal', [AnimalController::class, 'store']);
 Route::delete('/apagar-animal/{id}', [AnimalController::class, 'destroy']);
-
+Route::get('/editar-animal/{id}', [AnimalController::class, 'edit']);
+Route::put('/update-animal/{id}',[AnimalController::class, 'update']);
 require __DIR__.'/auth.php';

@@ -67,9 +67,11 @@ class AnimalController extends Controller
      * @param  \App\Models\Animal  $animal
      * @return \Illuminate\Http\Response
      */
-    public function edit(Animal $animal)
+    public function edit( $animal)
     {
-        //
+        $animal = Animal::findOrFail($animal);
+        return view('editar-animal', ['animal' => $animal]);
+
     }
 
     /**
@@ -79,9 +81,10 @@ class AnimalController extends Controller
      * @param  \App\Models\Animal  $animal
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Animal $animal)
+    public function update(Request $request, $animal)
     {
-        //
+        Animal::findOrFail($animal)->update($request->all());
+        return redirect('/dashboard');
     }
 
     /**

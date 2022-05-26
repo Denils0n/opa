@@ -29,11 +29,12 @@
                                 <td>{{$animal->AN_RACA}}</td>
                                 <td>{{$animal->AN_COMPRAVACINA}}</td>
                                 <td>
-                                <form action="/apagar-animal/{{$animal->id}}" method="post">
+                                <form action="/apagar-animal/{{$animal->id}}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" name="Apagar"> APAGAR</button>
+                                    <button type="submit" name="Apagar" data-toggle="modal" data-target="#exampleModal"> APAGAR</button>
                                 </form>
+                                <a href="/editar-animal/{{$animal->id}}" method="GET"> editar</a>
                                 </td>
                             </tr>
                         @endforeach
@@ -52,4 +53,7 @@
             </div>
         </div>
     </div>
+    
 </x-app-layout>
+
+
