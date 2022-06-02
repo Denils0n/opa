@@ -32,7 +32,7 @@
                                 <form action="/apagar-animal/{{$animal->id}}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" name="Apagar" data-toggle="modal" data-target="#exampleModal"> APAGAR</button>
+                                    <button type="submit" name="Apagar" data-toggle="modal" data-target="#exampleModal" onclick="return confirm('Tem certeza que quer deletar esse animal?');">APAGAR</button>
                                 </form>
                                 <a href="/editar-animal/{{$animal->id}}" method="GET"> editar</a>
                                 </td>

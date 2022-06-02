@@ -97,7 +97,7 @@ class AnimalController extends Controller
     {
         Animal::findOrFail($animal)->delete();
         //Animal::find($animal)->delete();
-        return redirect('/dashboard');
+        return redirect()->back();
         //echo $animal;
     }
 }
