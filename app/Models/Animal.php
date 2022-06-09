@@ -22,5 +22,10 @@ class Animal extends Model
         return $this->belongsTo(User::class, 'user_id');
 
     }
+    public function contrato(){
+
+        return $this->hasMany(Contrato::class, 'animal_id');
+
+    }
 
 }

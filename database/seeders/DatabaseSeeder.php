@@ -38,6 +38,12 @@ class DatabaseSeeder extends Seeder
 
 
         ]);
+        $this->call([
+
+            ContratoSeeder::class
+
+
+        ]);
 
 
        
