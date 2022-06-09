@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Prestador_servico_categoria;
+use App\Models\Servicos;
 use Illuminate\Http\Request;
 
-class PrestadorServicoCategoriaController extends Controller
+class ServicosController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class PrestadorServicoCategoriaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Prestador_servico_categoria  $prestador_servico_categoria
+     * @param  \App\Models\Servicos  $servicos
      * @return \Illuminate\Http\Response
      */
-    public function show(Prestador_servico_categoria $prestador_servico_categoria)
+    public function show(Servicos $servicos)
     {
         //
     }
@@ -52,10 +52,10 @@ class PrestadorServicoCategoriaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Prestador_servico_categoria  $prestador_servico_categoria
+     * @param  \App\Models\Servicos  $servicos
      * @return \Illuminate\Http\Response
      */
-    public function edit(Prestador_servico_categoria $prestador_servico_categoria)
+    public function edit(Servicos $servicos)
     {
         //
     }
@@ -64,10 +64,10 @@ class PrestadorServicoCategoriaController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Prestador_servico_categoria  $prestador_servico_categoria
+     * @param  \App\Models\Servicos  $servicos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Prestador_servico_categoria $prestador_servico_categoria)
+    public function update(Request $request, Servicos $servicos)
     {
         //
     }
@@ -75,10 +75,10 @@ class PrestadorServicoCategoriaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Prestador_servico_categoria  $prestador_servico_categoria
+     * @param  \App\Models\Servicos  $servicos
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Prestador_servico_categoria $prestador_servico_categoria)
+    public function destroy(Servicos $servicos)
     {
         //
     }

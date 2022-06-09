@@ -11,4 +11,10 @@ class Categoria extends Model
     protected $fillable =[
         'nome'
     ];
+
+    public function servicoPrestadorCategoria(){
+
+        return $this->hasMany(Prestador_servico_categoria::class, 'categoria_id');
+
+    }
 }

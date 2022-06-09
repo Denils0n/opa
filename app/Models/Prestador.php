@@ -20,5 +20,15 @@ class Prestador extends Model
         'complemento',
         'celular'
     ];
+    public function servico() {
+        return $this->hasMany(Servicos::class);
+    }
+
+    public function categoria() {
+        return $this->belongsToMany(Categoria::class, 'servico', 'prestador_id', 'categoria_id');
+        
+        
+    }
+
 
 }

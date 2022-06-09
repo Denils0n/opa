@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePrestadorServicoCategoriaTable extends Migration
+class CreateServicoTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,15 @@ class CreatePrestadorServicoCategoriaTable extends Migration
      */
     public function up()
     {
-        Schema::create('prestador_servico_categoria', function (Blueprint $table) {
+        Schema::create('servico', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('hora');
+            $table->string('preco');
+            $table->text('descricao');
             $table->foreignId('prestador_id');
-            $table->foreignId('servico_id');
             $table->foreignId('categoria_id');
+            
         });
     }
 
@@ -29,6 +32,6 @@ class CreatePrestadorServicoCategoriaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('prestador_servico_categoria');
+        Schema::dropIfExists('servico');
     }
 }

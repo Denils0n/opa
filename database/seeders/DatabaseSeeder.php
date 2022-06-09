@@ -32,12 +32,12 @@ class DatabaseSeeder extends Seeder
             PrestadorSeeder::class
 
         ]);
-        $this->call([
+        //$this->call([
 
-            ServicoSeeder::class
+       //     ServicoSeeder::class
 
 
-        ]);
+       // ]);
         $this->call([
 
             ContratoSeeder::class
