@@ -19,7 +19,6 @@ class ContratoSeeder extends Seeder
         for ($i=0; $i < 10; $i++) { 
             Contrato::factory()->create([
                 'animal_id' => Animal::All()->random()->id,
-                'servico_id' => Servicos::all()->random()->id
             ]);  
         }
     }
