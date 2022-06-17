@@ -26,4 +26,8 @@ class Servicos extends Pivot
     public function categoria() {
         return $this->belongsTo(Categoria::class);
     }
+
+    public function contratos() {
+        return $this->belongsToMany(Contrato::class, 'servico_contrato', 'servico_id', 'contrato_id');
+    }
 }

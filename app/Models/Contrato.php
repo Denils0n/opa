@@ -14,9 +14,11 @@ class Contrato extends Model
     ];
 
     public function animalContrato (){
-
         return $this->belongsTo(Animal::class, 'animal_id');
+    }
 
+    public function servicos() {
+        return $this->belongsToMany(Servicos::class, 'servico_contrato', 'contrato_id', 'servico_id');
     }
    
 }
