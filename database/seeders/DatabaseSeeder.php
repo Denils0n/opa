@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 
 use App\Models\User;
-//use App\Models\Servico;
+use App\Models\Servicos;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -32,21 +32,21 @@ class DatabaseSeeder extends Seeder
             PrestadorSeeder::class
 
         ]);
-        //$this->call([
-
-       //     ServicoSeeder::class
-
-
-       // ]);
         $this->call([
 
-            ContratoSeeder::class
+            CategoriaSeeder::class
 
 
         ]);
         $this->call([
 
-            CategoriaSeeder::class
+           ServicosSeeder::class
+
+
+       ]);
+        $this->call([
+
+            ContratoSeeder::class
 
 
         ]);
