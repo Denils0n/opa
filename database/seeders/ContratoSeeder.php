@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Animal;
 use App\Models\Contrato;
+use App\Models\Servicos;
 use Illuminate\Database\Seeder;
 
 class ContratoSeeder extends Seeder
@@ -16,7 +17,10 @@ class ContratoSeeder extends Seeder
     public function run()
     {
         for ($i=0; $i < 10; $i++) { 
-            Contrato::factory()->create(['animal_id' => Animal::All()->random()->id]);  
+            Contrato::factory()->create([
+                'animal_id' => Animal::All()->random()->id,
+                'servico_id' => Servicos::all()->random()->id
+            ]);  
         }
     }
 }
