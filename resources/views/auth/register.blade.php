@@ -32,6 +32,7 @@
 
                 <x-input id="telefone" class="block mt-1 w-full" type="number" name="telefone" :value="old('telefone')" required  />
             </div>
+            
 
             <!-- estado  -->
             <div class="mt-4">

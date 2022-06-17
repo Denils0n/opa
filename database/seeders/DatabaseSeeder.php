@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-
+use App\Models\ServicoContrato;
 use App\Models\User;
 use App\Models\Servicos;
 use Illuminate\Database\Seeder;
@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
         
         User::factory(10)->create();
         //Tutor::factory(10)->create();
+
       
         
        
@@ -50,6 +51,8 @@ class DatabaseSeeder extends Seeder
 
 
         ]);
+        
+
 
 
 

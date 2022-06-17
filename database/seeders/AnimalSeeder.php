@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 use \App\Models\Animal;
-
+use App\Models\Contrato;
+use App\Models\ServicoContrato;
+use App\Models\Servicos;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -21,7 +23,7 @@ class AnimalSeeder extends Seeder
     }
 
 }
-    
+   
      //
 
     
