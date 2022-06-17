@@ -12,9 +12,11 @@ class Categoria extends Model
         'nome'
     ];
 
-    public function servicoPrestadorCategoria(){
+    public function servicos(){
+        return $this->hasMany(Servicos::class, 'categoria_id');
+    }
 
-        return $this->hasMany(Prestador_servico_categoria::class, 'categoria_id');
-
+    public function prestadores() {
+        return $this->belongsToMany(Prestador::class, 'servicos', 'categoria_id', 'prestador_id');
     }
 }

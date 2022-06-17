@@ -24,8 +24,11 @@ class Prestador extends Model
         return $this->hasMany(Servicos::class);
     }
 
-    public function categoria() {
-        return $this->belongsToMany(Categoria::class, 'servico', 'prestador_id', 'categoria_id');
+    public function categorias() {
+        return $this
+            ->belongsToMany(Categoria::class, 'servico', 'prestador_id', 'categoria_id')
+            ->withTimestamps()
+            ->withPivot('id', 'hora', 'preco', 'descricao');
         
         
     }
