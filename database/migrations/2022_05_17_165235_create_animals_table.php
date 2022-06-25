@@ -16,12 +16,12 @@ class CreateAnimalsTable extends Migration
         Schema::create('animals', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('AN_NOME');
-            $table->mediumInteger('AN_IDADE');
-            $table->text('AN_DESCRICAO');
-            $table->string('AN_TIPO');
-            $table->string('AN_RACA');
-            $table->string('AN_COMPRAVACINA');
+            $table->string('NOME');
+            $table->mediumInteger('IDADE');
+            $table->text('DESCRICAO');
+            $table->string('TIPO');
+            $table->string('RACA');
+            $table->string('COMPRAVACINA');
             $table->foreignId('user_id');
         });
     }

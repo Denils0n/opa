@@ -9,12 +9,12 @@ class Animal extends Model
 {
     use HasFactory;
     protected $fillable =[
-        'AN_NOME',
-        'AN_IDADE',
-        'AN_DESCRICAO',
-        'AN_TIPO',
-        'AN_RACA',
-        'AN_COMPRAVACINA',
+        'NOME',
+        'IDADE',
+        'DESCRICAO',
+        'TIPO',
+        'RACA',
+        'COMPRAVACINA',
         'user_id',
     ];
     public function donoAnimal (){

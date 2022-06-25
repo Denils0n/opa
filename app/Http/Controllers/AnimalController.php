@@ -38,12 +38,12 @@ class AnimalController extends Controller
     public function store(Request $request)
     {
         Animal::create([
-            'AN_NOME' => $request->AN_NOME,
-            'AN_IDADE' => $request->AN_IDADE,
-            'AN_DESCRICAO' => $request->AN_DESCRICAO,
-            'AN_TIPO' => $request->AN_TIPO,
-            'AN_RACA' => $request->AN_RACA,
-            'AN_COMPRAVACINA' => $request->AN_COMPRAVACINA,
+            'NOME' => $request->NOME,
+            'IDADE' => $request->IDADE,
+            'DESCRICAO' => $request->DESCRICAO,
+            'TIPO' => $request->TIPO,
+            'RACA' => $request->RACA,
+            'COMPRAVACINA' => $request->COMPRAVACINA,
             'user_id' => Auth::user()->id
         ]);
 

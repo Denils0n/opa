@@ -15,12 +15,12 @@ class AnimalFactory extends Factory
     {
         return [
             //
-            'AN_NOME' => $this->faker->name(),
-            'AN_IDADE'=> $this->faker->randomNumber(1),
-            'AN_DESCRICAO'=> $this->faker->text(),
-            'AN_TIPO'=> $this->faker->title(),
-            'AN_RACA'=> $this->faker->title(),
-            'AN_COMPRAVACINA'=>$this->faker->url(),
+            'NOME' => $this->faker->name(),
+            'IDADE'=> $this->faker->randomNumber(1),
+            'DESCRICAO'=> $this->faker->text(),
+            'TIPO'=> $this->faker->title(),
+            'RACA'=> $this->faker->title(),
+            'COMPRAVACINA'=>$this->faker->url(),
             
         ];
     }
