@@ -24,7 +24,7 @@ class PrestadorController extends Controller
      */
     public function create()
     {
-        //
+        return view('prestador.create');
     }
 
     /**
@@ -35,7 +35,18 @@ class PrestadorController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $prestador = Prestador::create([
+            "CPF/CNPJ" => $request->CPF,
+            "nome" => $request->nome,
+            "estado" => $request->estado,
+            "cidade" => $request->cidade,
+            "bairro" => $request->bairro,
+            "rua"=> $request->rua,
+            "numero"=> $request->numero,
+            "complemento" => $request->complemento,
+            "celular" => $request->celular,
+        ]);
+        dd($prestador);
     }
 
     /**
