@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AnimalController;
+use App\Http\Controllers\PrestadorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +23,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::resource('/prestador', PrestadorController::class);
 Route::post('/add-animal', [AnimalController::class, 'store']);
 Route::delete('/apagar-animal/{id}', [AnimalController::class, 'destroy']);
 Route::get('/editar-animal/{id}', [AnimalController::class, 'edit']);
