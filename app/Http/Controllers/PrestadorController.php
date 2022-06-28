@@ -75,10 +75,9 @@ class PrestadorController extends Controller
      */
     public function edit(Prestador $prestador)
     {
-        //
-        $prestador = prestador::get();
-
-        return view('prestador.editar-prestador',compact('prestador'));
+        $arr = json_decode($prestador, true);
+        $prestador->cpf = $arr["CPF/CNPJ"];
+        return view('prestador.edit',compact('prestador'));
         
     }
 
