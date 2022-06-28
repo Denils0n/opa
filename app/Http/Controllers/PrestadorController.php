@@ -101,6 +101,9 @@ class PrestadorController extends Controller
      */
     public function destroy(Prestador $prestador)
     {
-        //
+        Prestador::findOrFail($prestador)->delete();
+        //Animal::find($animal)->delete();
+        return redirect()->back();
+        //echo $animal;
     }
 }
