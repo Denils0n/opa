@@ -15,6 +15,12 @@ class PrestadorController extends Controller
     public function index()
     {
         //
+        $prestador = prestador::get();
+
+        dd($prestador);
+
+        
+          
     }
 
     /**
@@ -69,6 +75,10 @@ class PrestadorController extends Controller
     public function edit(Prestador $prestador)
     {
         //
+        $prestador = prestador::get();
+
+        return view('prestador.editar-prestador',compact('prestador'));
+        
     }
 
     /**
