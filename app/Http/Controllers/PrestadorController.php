@@ -41,9 +41,10 @@ class PrestadorController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request->cpf);
         $prestador = Prestador::create([
-            "CPF/CNPJ" => $request->CPF,
             "nome" => $request->nome,
+            "CPF/CNPJ" => $request->cpf,
             "estado" => $request->estado,
             "cidade" => $request->cidade,
             "bairro" => $request->bairro,
