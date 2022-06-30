@@ -18,7 +18,9 @@ class Prestador extends Model
         'rua',
         'numero',
         'complemento',
-        'celular'
+        'celular',
+        'user_id'
+
     ];
     public function servico() {
         return $this->hasMany(Servicos::class);
@@ -31,6 +33,9 @@ class Prestador extends Model
             ->withPivot('id', 'hora', 'preco', 'descricao');
         
         
+    }
+    public function user() {
+        return $this->belongsTo(User::class);
     }
 
 

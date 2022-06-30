@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Prestador;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
@@ -60,7 +61,22 @@ class RegisteredUserController extends Controller
             'complemento' => $request->complemento,
             'password' => Hash::make($request->password),
 
-        ])->givePermissionTo('usuario'); 
+        ]); 
+
+        if ($request->eh_prestador == '1') {
+            Prestador::create([
+                "nome" => $request->name,
+                "CPF/CNPJ" => $request->cpf,
+                "estado" => $request->estado,
+                "cidade" => $request->cidade,
+                "bairro" => $request->bairro,
+                "rua"=> $request->rua,
+                "numero"=> $request->numero,
+                "complemento" => $request->complemento,
+                "celular" => $request->telefone,
+                'user_id' => $user->id,
+            ]);
+        }
 
         event(new Registered($user));
 

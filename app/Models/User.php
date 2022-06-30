@@ -55,4 +55,11 @@ class User extends Authenticatable
         return $this->hasMany(Animal::class, 'user_id');
 
     }
+    public function prestadorProfile() {
+        return $this->hasOne(Prestador::class);
+    }
+
+    public function isPrestador() {
+        return $this->prestadorProfile != null;
+    }
 }

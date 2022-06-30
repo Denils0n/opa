@@ -1,3 +1,4 @@
+
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
@@ -100,6 +101,10 @@
                 <x-input id="password_confirmation" class="block mt-1 w-full"
                                 type="password"
                                 name="password_confirmation" required />
+            </div>
+
+            <div>
+                é prestador? <input type="number" name="eh_prestador" value="0">
             </div>
 
             <div class="flex items-center justify-end mt-4">
