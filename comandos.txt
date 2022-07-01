@@ -1,0 +1,30 @@
+Animal::find(1)->contrato
+306: Animal::find(1)->contrato[0]
+307: Animal::find(1)->contrato[0]->servicos
+308: Animal::find(1)->contrato[0]->servicos()->sync([1, 2, 3])
+309: Animal::find(1)->contrato[0]->servicos
+310: hisory
+311: history
+312: history
+313: User::all()
+314: User::all()[0]
+315: User::all()->chunks(5)
+316: User::all()->chuncks(5)
+317: User::all()->chunk(5)
+318: User::all()
+319: User::all()->map(function($user) { return $user->isPrestador; })
+320: User::all()->map(function($user) { return $user->isPrestador; })
+321: User::all()->map(function($user) { return $user->isPrestador(); })
+322: User::all();
+323: User::all()->map(function($user) { return $user->isPrestador(); })
+324: User::all()
+325: User::all()
+326: User::all()[0]
+327: User::all()[0]
+328: User::all()[1]
+329: User::all()
+330: User::find(11)
+331: User::find(11)->isPrestador()
+332: User::find(10)->isPrestador()
+333: User::all();
+334: User::all()->map(function($user) { return $user->email.' '.$user->isPrestador(); })
