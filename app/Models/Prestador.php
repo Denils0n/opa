@@ -22,7 +22,7 @@ class Prestador extends Model
         'user_id'
 
     ];
-    public function servico() {
+    public function servicos() {
         return $this->hasMany(Servicos::class);
     }
 
