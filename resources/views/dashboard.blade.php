@@ -2,6 +2,8 @@
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Dashboard') }}
+            @return vaid
+            
         </h2>
     </x-slot>
 
@@ -52,11 +54,12 @@
                         <input type="text" name="DESCRICAO" placeholder="DESCRIÇAO">
                         <input type="text" name="TIPO" placeholder="TIPO DO ANIMAL">
                         <input type="text" name="RACA" placeholder="RAÇA">
-                        <input type="text" name="COMPRAVACINA" placeholder="COMPROVANTE DE VACIA">
+                        <input type="text" name="COMPRAVACINA" placeholder="COMPROVANTE DE VACINA">
                         <input type="submit" value="Adicionar">
                     </form>
                 </div>
             </div>
+
         </div>
     </div>
     
