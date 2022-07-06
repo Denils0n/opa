@@ -53,7 +53,5 @@ Route::middleware('auth')->group(function () {
 
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->name('logout');
-    Route::get('/', function () {
-                    return view('welcome', ['name' => 'Samantha']);
-                });
+
 });

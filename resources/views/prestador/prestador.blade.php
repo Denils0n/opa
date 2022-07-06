@@ -55,12 +55,11 @@
                     </form>
                 </div>
             </div>
-            <tr>
-            return view(prestador', ['name' => 'Eu']);
+            
         </div>
     </div>
-</tr>
-@endforeach
+
+
 </x-app-layout>
 
 

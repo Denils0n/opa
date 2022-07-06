@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\AnimalController;
 use App\Http\Controllers\PrestadorController;
-use App\Models\Prestador;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,8 +30,7 @@ Route::post('/add-animal', [AnimalController::class, 'store']);
 Route::delete('/apagar-animal/{id}', [AnimalController::class, 'destroy']);
 Route::get('/editar-animal/{id}', [AnimalController::class, 'edit']);
 Route::put('/update-animal/{id}',[AnimalController::class, 'update']);
-Route::get('/add-prestador',[PrestadorCcontroller::class,'store']);
-Route::get('/editar-prestador/{id}',[PrestadorCcontroller::class,'edit']);
+
 
 require __DIR__.'/auth.php';
 
