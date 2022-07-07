@@ -56,6 +56,22 @@
                         <input type="text" name="COMPRAVACINA" placeholder="COMPROVANTE DE VACINA">
                         <input type="submit" value="Adicionar">
                     </form>
+                    <table>
+                        <tr>
+                            <th>PRESTADOR</th>
+                            <th>HORA</th>
+                            <th>PREÇO</th>
+                        </tr>
+                        <tr>
+                           @foreach(App\Models\Prestador::all() as $prestador)
+                            <td>{{$prestador->nome}}</td>
+                           @foreach($prestador->servicos as $servico)
+                            <td>{{$servico->hora}}</td>
+                            <td>{{$servico->preco}}</td>
+                           @endforeach
+                        </tr>
+                        @endforeach                    
+                    </table>
                 </div>
             </div>
 
