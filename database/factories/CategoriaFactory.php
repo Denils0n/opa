@@ -15,7 +15,7 @@ class CategoriaFactory extends Factory
     {
         return [
             //
-            'nome'=>$this->faker->name()
+            'nome'=>$this->faker->randomElement(["tosa", "banho", "hospedagem"])
         ];
     }
 }

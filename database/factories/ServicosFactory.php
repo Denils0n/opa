@@ -16,7 +16,7 @@ class ServicosFactory extends Factory
     public function definition()
     {
         return [
-            'prestador_id' => Prestador::All()->random()->id,
+            'prestador_id' => random_int(1,2),
             'categoria_id' => Categoria::All()->random()->id,
             'hora' => $this ->faker->randomNumber(1,true),
             'preco' => $this ->faker->randomFloat(1,20,30),

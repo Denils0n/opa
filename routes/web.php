@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AnimalController;
 use App\Http\Controllers\PrestadorController;
+use App\Http\Controllers\ServicosController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,6 +31,13 @@ Route::post('/add-animal', [AnimalController::class, 'store']);
 Route::delete('/apagar-animal/{id}', [AnimalController::class, 'destroy']);
 Route::get('/editar-animal/{id}', [AnimalController::class, 'edit']);
 Route::put('/update-animal/{id}',[AnimalController::class, 'update']);
+Route::post('/add-servico', [ServicosController::class, 'store']);
+Route::delete('/apagar-servico/{id}', [ServicosController::class, 'destroy']);
+Route::get('/editar-servico/{id}', [ServicosController::class, 'edit']);
+Route::put('/update-servicos/{id}',[ServicosController::class, 'update']);
+
+
+
 
 
 require __DIR__.'/auth.php';

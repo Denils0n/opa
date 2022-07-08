@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Prestador;
 use App\Models\Servicos;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 class ServicosController extends Controller
 {
@@ -35,7 +38,15 @@ class ServicosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $a = Auth::user()->id;
+        Servicos::create([
+            'hora' => $request->hora,
+            'preco' => $request->preco,
+            'descricao'=>$request->descricao,
+            'categoria_id' => $request->servico,
+            'prestador_id' => $a-10
+        ]);
+        return redirect('/dashboard');
     }
 
     /**
@@ -55,9 +66,10 @@ class ServicosController extends Controller
      * @param  \App\Models\Servicos  $servicos
      * @return \Illuminate\Http\Response
      */
-    public function edit(Servicos $servicos)
+    public function edit($servicos)
     {
-        //
+        $servicos = Servicos::findOrFail($servicos);
+        return view('editar-servico', ['servicos' => $servicos]);
     }
 
     /**
@@ -67,9 +79,12 @@ class ServicosController extends Controller
      * @param  \App\Models\Servicos  $servicos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Servicos $servicos)
+    public function update(Request $request, $servicos)
     {
-        //
+
+        var_dump($servicos);
+        Servicos::findOrFail($servicos)->update($request->all());
+        return redirect('/dashboard');
     }
 
     /**
@@ -78,8 +93,9 @@ class ServicosController extends Controller
      * @param  \App\Models\Servicos  $servicos
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Servicos $servicos)
+    public function destroy($servicos)
     {
-        //
+        Servicos::findOrFail($servicos)->delete();
+        return redirect()->back();
     }
 }
